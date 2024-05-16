@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block CSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/ver-pedidos.css') }}">
+{% endblock %}
+
+{% block Title %} {% endblock %}
+
+{% block content %}
+    <div> 
+        <table class="Tabla">
+            <tr>
+              <th>Tipo</th>
+              <th>Producto(s)</th>
+              <th>Región</th>
+              <th>Comuna</th>
+              <th>Nombre Comprador</th>
+            </tr>
+            <tr onclick="window.location='informacion-pedido.html';">
+              <td>Fruta</td>
+              <td>Perejil</td>
+              <td>Región del Maule</td>
+              <td>Curepto</td>
+              <td>Vicente</td>
+            </tr>
+            <tr onclick="window.location='informacion-pedido.html';">
+              <td>Verdura</td>
+              <td>Alcachofa</td>
+              <td>Coquimbo</td>
+              <td>Andacollo</td>
+              <td>Martin</td>
+            </tr>
+            <tr onclick="window.location='informacion-pedido.html';">
+              <td>Fruta</td>
+              <td>Pomelo</td>
+              <td>Valparaíso</td>
+              <td>Valparaíso</td>
+              <td>Blas</td>
+            </tr>
+            <tr onclick="window.location='informacion-pedido.html';">
+              <td>Verdura</td>
+              <td>Champiñón</td>
+              <td>Región del Libertador Gral. Bernardo O’Higgins</td>
+              <td>Codegua</td>
+              <td>Andrés</td>
+            </tr>
+            <tr onclick="window.location='informacion-pedido.html';">
+              <td>Verdura</td>
+              <td>Berenjena</td>
+              <td>Región de Ñuble</td>
+              <td>Portezuelo</td>
+              <td>Benjamin</td>
+            </tr>
+          </table>
+    </div>
+{% endblock content %}
+</html>

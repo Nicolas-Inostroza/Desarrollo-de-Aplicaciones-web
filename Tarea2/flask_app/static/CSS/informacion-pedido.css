@@ -1,0 +1,36 @@
+/* Fondo en gradiente */
+.fondo {
+    background: linear-gradient(to bottom right, rgba(9,9,121,1)5%, rgba(0,212,255,1)100%);
+    height: 100%;
+}
+
+/* Barra superior */
+body{
+    margin: 0;
+}
+.menu{
+    overflow: hidden;
+    background-color: rgb(88, 83, 83);
+}
+.menu a{
+    float: left;
+    color:whitesmoke;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: x-large;
+}
+.menu a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+.menu a.titulo {
+    background-color: rgb(222, 243, 146);
+    color: black;
+    
+}
+/* Fin barra superior */
+.cuerpo{
+    font-size: xx-large;
+    text-align: center;
+}

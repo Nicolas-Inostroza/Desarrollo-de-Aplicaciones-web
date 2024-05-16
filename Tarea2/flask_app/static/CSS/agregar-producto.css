@@ -1,0 +1,81 @@
+/* Fondo en gradiente */
+.fondo {
+    background: linear-gradient(to bottom right, rgba(9,9,121,1)5%, rgba(0,212,255,1)100%);
+    height: 100%;
+}
+
+/* Barra superior */
+body{
+    margin: 0;
+}
+.menu{
+    overflow: hidden;
+    background-color: rgb(88, 83, 83);
+}
+.menu a{
+    float: left;
+    color:whitesmoke;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: x-large;
+}
+.menu a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+.menu a.titulo {
+    background-color: rgb(222, 243, 146);
+    color: black;
+    
+}
+/* Fin barra superior */
+.cuerpo{
+    font-size: larger;
+    text-align: center;
+}
+.formulario{
+    background-color: antiquewhite;
+    border: 1px black;
+    border-style: solid;
+    margin-top: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.lista{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: fit-content;
+}
+#confirm{
+    display: none;
+    background-color: rgb(194, 195, 251);
+    border: 1px solid green;
+    position: fixed;
+    height: 100px;
+    width: fit-content;
+    left: 42%;
+    top: 25%;
+    padding: 6px 8px 8px;
+    text-align: center;
+ }
+ p {
+    font-size: 18px;
+    color: red;
+ }
+ button {
+    border-radius: 12px;
+    height: fit-content;
+    width: fit-content;
+    padding: 7px 10px;
+    cursor: pointer;
+    border: 2px solid green;
+    background-color: aqua;
+    margin: 5px;
+ }
+ .close {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+ }

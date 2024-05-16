@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es" class="fondo">
+    <head>
+        <meta charset="utf-8">
+        {% block CSS%}{% endblock %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+
+        <title> Tareita epica legendaria </title>
+
+    </head>
+    <body>
+        <!--  No Tocar -->
+        <nav>
+            <div class="Nav-bar";>
+                <a href="{{ url_for('index') }}"; class="titulo">Inicio</a>
+                <a href="{{ url_for('agregar_producto') }}" >Agregar Producto</a>
+                <a href="{{ url_for('ver_producto') }}">Ver Producto</a>
+                <a href="{{ url_for('agregar_pedido') }}">Agregar Pedido</a>
+                <a href="{{ url_for('ver_pedido') }}">Ver Pedido</a>
+            </div>
+        </nav>
+    </body>
+    <section class="main-container">
+        {% block content %}{% endblock %}
+        {% block javascript %}{% endblock %}
+    </section>
+</html>

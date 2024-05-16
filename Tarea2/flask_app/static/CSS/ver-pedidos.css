@@ -1,0 +1,20 @@
+
+.Tabla{
+    background-color: gainsboro;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    border-collapse: collapse;
+}
+
+.Tabla th{
+    border: 2px black;
+    border-style: solid;
+    font-size: x-large;
+    text-decoration: underline;
+
+}
+.Tabla td{
+    border: 1px solid black;
+    font-size: large;
+}

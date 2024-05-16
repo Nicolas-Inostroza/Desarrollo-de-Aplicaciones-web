@@ -1,0 +1,37 @@
+
+  {% extends 'base.html' %}
+
+  {% block CSS %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/ver-productos.css') }}">
+  {% endblock %}
+
+  {% block content %}
+      <div class="cuerpo"> 
+          <table class="Tabla">
+              <tr>
+                <th>Tipo</th>
+                <th>Producto(s)</th>
+                <th>Región</th>
+                <th>Comuna</th>
+                <th>Fotos</th>
+              </tr>
+              {% if datos %}
+                {% for producto in datos %}
+                  <tr>
+                    <td> <a href="{{ url_for('informacion_producto', producto_id = producto.productor_id) }}">{{producto.tipo}}</a></td>
+                    <td> <a href="{{ url_for('informacion_producto', producto_id = producto.productor_id) }}">{{producto.frut_verd}}</a></td>
+                    <td> <a href="{{ url_for('informacion_producto', producto_id = producto.productor_id) }}">{{producto.region}}</a></td>
+                    <td> <a href="{{ url_for('informacion_producto', producto_id = producto.productor_id) }}">{{producto.comuna}}</a></td>
+                    <td> <a href="{{ url_for('informacion_producto', producto_id = producto.productor_id) }}"><img src="{{producto.img_path}}" width="120" height="120"></a></td>
+                  </tr>
+                {% endfor %}
+              {% endif %}
+          </table>
+        {% if paginas == True %}
+        <div class="paginas" id="paginas">
+          <a href="{{url_for('ver_producto')}}"> 1</a>
+          <a href="{{url_for('ver_producto',page=2)}}"> 2</a>
+        </div>
+        {% endif %}
+      </div>
+  {% endblock content%}

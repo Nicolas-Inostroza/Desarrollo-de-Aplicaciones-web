@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+    {% extends 'base.html' %}
+
+    {% block CSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/informacion-pedido.css') }}">
+    {% endblock %}
+
+
+    {% block content %}
+        <div class="todo">
+            <div class="tipo">
+                <h1>Alcachofa</h1>
+                <h2>Tipo: Verdura</h2> 
+            </div>
+            <div class="direccion">
+                <h3>Región:Coquimbo</h3>
+                
+                <h3>Comuna:Andacollo</h3>
+            </div>
+            <div class="descripcion">
+                <p>
+                    La alcachofa tiene una apariencia única, con hojas gruesas y carnosas dispuestas en forma de roseta alrededor de un corazón central. 
+                    Estas hojas están protegidas por espinas en los bordes.
+                    Se cosecha antes de que la flor se desarrolle por completo, cuando los capullos están tiernos y compactos.
+
+                    En términos de sabor, la alcachofa tiene un perfil ligeramente amargo y terroso, con una textura tierna y carnosa. 
+                    Se puede consumir cruda, cocida, al vapor, asada, o en diversas preparaciones culinarias, como ensaladas, guisos, salsas, rellenos, y más.
+
+                    Además de su sabor delicioso y versatilidad en la cocina, la alcachofa es conocida por sus posibles beneficios para la salud. Se dice que es rica
+                    en antioxidantes, fibra, vitaminas y minerales, y se le atribuyen propiedades que pueden ayudar en la digestión, reducir el colesterol y mejorar la salud del hígado.</p>
+            </div>
+
+            <div class="info">
+                <h2>Información del Comprador:</h2>
+                <p>Nombre: Julio Hernandez</p>
+                <p>Email:compradornumero1@gmail.com</p>
+                <p>Numero de telefono Movil:+56-987-654-321</p>
+
+            </div>
+        
+        </div>
+    {% endblock content %}
+    {% block javascript %}
+        <script lang="javascript" src="{{ url_for('static', filename='JS/informacion-producto.js') }}"></script>
+    {% endblock %}
