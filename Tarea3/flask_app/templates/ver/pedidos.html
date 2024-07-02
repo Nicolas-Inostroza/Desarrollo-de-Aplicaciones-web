@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+
+{% block CSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/ver-pedidos.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="cuerpo"> 
+        <table class="Tabla">
+            <tr>
+              <th>Tipo</th>
+              <th>Producto(s)</th>
+              <th>Región</th>
+              <th>Comuna</th>
+              <th>Nombre de Compraodor</th>
+            </tr>
+            {% if datos %}
+              {% for producto in datos %}
+                <tr>
+                  <td> <a href="{{ url_for('informacion_pedido', comprador_id = producto.productor_id) }}">{{producto.tipo}}</a></td>
+                  <td> <a href="{{ url_for('informacion_pedido', comprador_id = producto.productor_id) }}">{{producto.frut_verd}}</a></td>
+                  <td> <a href="{{ url_for('informacion_pedido', comprador_id = producto.productor_id) }}">{{producto.region}}</a></td>
+                  <td> <a href="{{ url_for('informacion_pedido', comprador_id = producto.productor_id) }}">{{producto.comuna}}</a></td>
+                  <td> <a href="{{ url_for('informacion_pedido', comprador_id = producto.productor_id) }}">{{producto.nombre}}</a></td>
+                </tr>
+              {% endfor %}
+            {% endif %}
+        </table>
+      {% if paginas == True %}
+      <div class="paginas" id="paginas">
+        <a href="{{url_for('ver_pedido')}}"> 1</a>
+        <a href="{{url_for('ver_pedido',page=1)}}"> 2</a>
+      </div>
+      {% endif %}
+    </div>
+{% endblock content%}

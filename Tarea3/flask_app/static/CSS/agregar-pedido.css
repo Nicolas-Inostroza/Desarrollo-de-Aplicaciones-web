@@ -1,0 +1,51 @@
+
+/* Fin barra superior */
+.cuerpo{
+    font-size: larger;
+    text-align: center;
+}
+.formulario{
+    background-color: antiquewhite;
+    border: 1px black;
+    border-style: solid;
+    margin-top: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.lista{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: fit-content;
+}
+#confirm{
+    display: none;
+    background-color: rgb(194, 195, 251);
+    border: 1px solid green;
+    position: fixed;
+    height: 100px;
+    width: fit-content;
+    left: 42%;
+    top: 25%;
+    padding: 6px 8px 8px;
+    text-align: center;
+ }
+ p {
+    font-size: 18px;
+    color: red;
+ }
+ button {
+    border-radius: 12px;
+    height: fit-content;
+    width: fit-content;
+    padding: 7px 10px;
+    cursor: pointer;
+    border: 2px solid green;
+    background-color: aqua;
+    margin: 5px;
+ }
+ .close {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+ }

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block CSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/estadisticas.css') }}">
+{% endblock %}
+
+{% block Title %} {% endblock %}
+
+{% block content %}
+    <div id="estadisticas-container">
+        <figure class="graf-figure">
+            <div id="producto-container">
+
+            </div>
+
+        </figure>
+        <figure class="graf-figure">
+            <div id="pedido-container">
+
+            </div>
+
+        </figure>
+    </div>
+
+{% endblock content %}
+
+{% block javascript %}
+<script lang="javascript" src="https://code.highcharts.com/highcharts.js"></script>
+<script lang="javascript" src="{{ url_for('static', filename='JS/estadisticas.js') }}"></script>
+{% endblock %}

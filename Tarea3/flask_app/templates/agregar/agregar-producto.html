@@ -1,0 +1,82 @@
+
+    {% extends 'base.html' %}
+
+
+    {% block CSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/agregar-producto.css') }}">
+    {% endblock %}
+
+    {% block content %}
+        <div class="cuerpo"> 
+            <form method="post" action="{{ url_for('agregar_producto') }}" class="formulario" id="formulario" enctype="multipart/form-data">
+
+                <label for="tipo">Escoge un Tipo:</label>
+                <select name="tipo" onchange="createselectsTipoFrutVerd()" id="tipo">
+                    <option value="">Selecciona un Tipo</option></br>
+                </select>
+
+                <div class="lista" id="divfruta">
+                    <label for="fruta_verdura">Seleccione maximo 5 opciones:</label><br>
+                    <select name="frutverd[]" class="frutverd" id="fruta_verdura" multiple>
+                        <option value="">Seleccione un tipo</option>
+                    </select><br>
+                </div>
+                
+                <!--Descripción-->
+                <div id="descripción">
+                    <label>Descripción del Producto:</label><br>
+                    <textarea name="descripcion" id="descripción-text-area" cols="50" rows="4"></textarea>
+                </div>
+
+                <!--Subir Imagenes-->
+                <div id="fotos">
+                    <input type="file" id="imagenes" name="fotossubidas[]" multiple>
+                </div>
+
+                <!--Selector de Región-->
+                <label for="Región">Escoge una Región:</label><br>
+                <select name = "Region" class="Tipo" id="Región" onchange="createselectsregionComuna()">
+                    <option value="">Seleccione una Región</option>
+                </select><br>
+    
+                <!-- Comunas por Región-->
+                <label>Escoge una Comuna:</label><br>
+                <div id="divcomuna1">
+                    <select name="comuna" class="comuna1" id="comuna1">
+                        <option value="">Seleccione una comuna</option>
+                    </select>
+                </div>
+
+                <!-- Nombre del Productor-->
+                <div id="nombre">
+                    <label for="nombre-text-area">Nombre del Productor:</label><br>
+                    <textarea name="nombre" id="nombre-text-area" maxlength="80" cols="50" placeholder="Minimo 3 caracteres maximo 80"></textarea>
+                </div>
+
+                <!-- Email del Productor-->
+                <div id="email">
+                    <label for="email-text-area">Email:</label><br>
+                    <textarea name="email" id="email-text-area" maxlength="30" cols="50" placeholder="Ej:email@mail.com"></textarea>
+                </div>
+
+                <!-- Numero del Productor-->
+                <div id="numero">
+                    <label for="num-text-area">Numero de telefono Movil:</label><br>
+                    <textarea name="numero" id="num-text-area" maxlength="15" cols="50" placeholder="Ej:+56-123-456-789"></textarea>
+                </div>
+                <button type="button" id="submit-btn">Enviar</a>
+            </form>
+
+        </div>
+        <div class="confirmbox" id="confirm">
+            <p>¿Confirma el registro de este producto?</p>
+            <div class="close">
+                <button id="si">Sí, confirmo</button>
+                <button id="no">No, quiero volver al formulario</button>
+            </div>
+        </div>
+    {% endblock content %}
+
+    {% block javascript %}
+        <script lang="javascript" src="{{ url_for('static', filename='JS/agregar-producto.js') }}"></script>
+    {% endblock %}

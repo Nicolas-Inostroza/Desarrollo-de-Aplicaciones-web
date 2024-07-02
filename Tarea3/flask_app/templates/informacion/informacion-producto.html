@@ -1,0 +1,46 @@
+
+    {% extends 'base.html' %}
+
+    {% block CSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/informacion-producto.css') }}">
+    {% endblock %}
+
+
+    {% block content %}
+        {% for productor in producto_info %}
+        <div class="todo">
+            <div class="tipo">
+                <h1>{{ productor.frut_verd }}</h1>
+                <h2>Tipo: {{productor.tipo}} </h2> 
+            </div>
+            <div class="direccion">
+                <h3>Región:{{productor.region}}</h3>
+                
+                <h3>Comuna:{{productor.comuna}}</h3>
+                
+            </div>
+            <div class="descripcion">
+                <h2>Descripcíon</h2>
+                <p>{{productor.descripcion}}</p>
+            </div>
+            <div class="imagen" id="divimg">
+                <h2>Imagenes:</h2>
+                {% for imagen in productor.imgs %}
+                <img src="/{{imagen[0]}}/640x480_{{imagen[1]}}" onclick="cambiodeImagen('{{imagen[0]}}','{{imagen[1]}}')" id="{{imagen[1]}}" class="foto">
+                {% endfor %}
+            </div>
+            <div class="imagengrande" id="imagengrande">
+            </div>
+            <div class="info">
+                <h2>Información del Productor:</h2>
+                <p>Nombre: {{productor.nombre_productor}}</p>
+                <p>Email:{{productor.mail_productor}}</p>
+                <p>Numero de telefono Movil:{{productor.celular_productor}}</p>
+            </div>
+        
+        </div>
+        {% endfor %}
+    {% endblock content %}
+    {% block javascript %}
+        <script lang="javascript" src="{{ url_for('static', filename='JS/informacion.js') }}"></script>
+    {% endblock %}

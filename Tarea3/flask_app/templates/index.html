@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    {% extends 'base.html' %}
+
+    {% block CSS %}
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/index.css')}}">
+    {% endblock %}
+
+    {% block content %}
+        <div class="menu">
+            <ul>
+                <li><a href="{{ url_for('index') }}" class="titulo";>Inicio</a></li><br>
+                <li><a href="{{ url_for('agregar_producto') }}" >Agregar Producto</a></li><br>
+                <li><a href="{{ url_for('ver_producto') }}">Ver Producto</a></li><br>
+                <li><a href="{{ url_for('agregar_pedido') }}">Agregar Pedido</a></li><br>
+                <li><a href="{{ url_for('ver_pedido') }}">Ver Pedido</a></li><br>
+                <li><a href="{{url_for('estadisticas')}}">Estadisticas</a></li>
+            </ul>
+        </div>
+    {% endblock content %}
+
+
+
+
+
+
+
+
+
